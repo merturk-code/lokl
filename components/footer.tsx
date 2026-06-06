@@ -31,7 +31,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="font-sans font-medium text-[17px] text-ink tracking-[-0.04em] leading-none mb-3">
+            <div className="font-sans font-medium text-[28px] text-ink tracking-[-0.04em] leading-none mb-3">
               lokl<span className="text-signal">.</span>
             </div>
             <p className="text-stone text-sm leading-relaxed font-light max-w-xs">

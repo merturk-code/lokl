@@ -40,7 +40,7 @@ function LogoMark() {
 
   /* A — default */
   return (
-    <span className={`${base} font-medium text-[17px] text-ink tracking-[-0.04em]`}>
+    <span className={`${base} font-medium text-[28px] text-ink tracking-[-0.04em]`}>
       lokl<span className="text-signal">.</span>
     </span>
   )
