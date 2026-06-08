@@ -18,7 +18,7 @@ export function FinalCTA() {
                 <span className="italic text-signal">your</span> site.
               </h2>
               <p className="text-white/50 text-base md:text-lg mb-10 max-w-md mx-auto font-light leading-relaxed">
-                We&apos;ll design a real draft of your site — completely free, no commitment. See what&apos;s possible before you decide anything.
+                We&apos;ll design a real draft of your site. Completely free, no commitment. See what&apos;s possible before you decide anything.
               </p>
               <Link
                 href="https://loklstudio.netlify.app"

@@ -39,11 +39,11 @@ export function Pricing() {
 
             {/* Heading */}
             <h3 className="font-sans font-medium text-2xl md:text-3xl text-ink mb-3 leading-snug tracking-[-0.02em] max-w-sm">
-              We&apos;re new — so our first clients get our best price.
+              We&apos;re new, so our first clients get our best price.
             </h3>
             <p className="text-stone text-sm mb-10 font-light leading-relaxed max-w-xs">
               In return for being early, you get a proper site at a founding
-              rate — and our full attention.
+              rate, with our full attention.
             </p>
 
             {/* Terms */}
@@ -71,7 +71,7 @@ export function Pricing() {
               Claim a founding spot
             </Link>
             <p className="text-stone/70 text-xs mt-4 font-light">
-              Only taking on a few at a time.
+              Limited-time founding offer.
             </p>
           </div>
         </FadeUp>

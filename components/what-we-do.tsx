@@ -7,7 +7,7 @@ const cards = [
   {
     icon: Fingerprint,
     title: "Made for your brand",
-    body: "We start from your colours, character, and story — never a template. Every element is chosen to feel unmistakably like you.",
+    body: "We start from your colours, character, and story. Never a template. Every element is chosen to feel unmistakably like you.",
   },
   {
     icon: Zap,
@@ -17,7 +17,7 @@ const cards = [
   {
     icon: Eye,
     title: "See it before you pay",
-    body: "We design a real draft of your site first. You only go ahead if you love it — no commitment, no risk.",
+    body: "We design a real draft of your site first. You only go ahead if you love it. No commitment, no risk.",
   },
 ]
 

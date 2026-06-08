@@ -11,7 +11,7 @@ const steps = [
   {
     number: "02",
     title: "We design a draft",
-    body: "Within a few days we'll have a real, tailored draft of your site — built around your brand, not a generic template.",
+    body: "Within a few days we'll have a real, tailored draft of your site, built around your brand rather than a generic template.",
   },
   {
     number: "03",
@@ -35,7 +35,7 @@ export function HowItWorks() {
               How it works
             </span>
             <h2 className="font-sans font-semibold text-4xl md:text-5xl text-white mt-3 leading-tight tracking-[-0.02em] max-w-lg">
-              Simple from start to site.
+              How it works.
             </h2>
           </div>
         </FadeUp>
