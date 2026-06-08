@@ -92,7 +92,7 @@ export function Nav() {
 
           {/* Desktop CTA */}
           <Link
-            href="https://londoner-studio.netlify.app/"
+            href="https://loklstudio.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex items-center px-5 py-2 rounded-full bg-signal text-white text-sm font-medium hover:bg-signal/90 transition-all duration-200 hover:shadow-lg hover:shadow-signal/20"
@@ -141,7 +141,7 @@ export function Nav() {
             </nav>
             <div className="mt-auto pt-10">
               <Link
-                href="https://londoner-studio.netlify.app/"
+                href="https://loklstudio.netlify.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex w-full items-center justify-center px-6 py-4 rounded-full bg-signal text-white text-base font-medium"

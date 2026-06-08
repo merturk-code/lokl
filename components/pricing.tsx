@@ -63,7 +63,7 @@ export function Pricing() {
 
             {/* CTA */}
             <Link
-              href="https://londoner-studio.netlify.app/"
+              href="https://loklstudio.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-3.5 rounded-full bg-signal text-white font-medium hover:bg-signal/90 transition-all duration-200 hover:shadow-xl hover:shadow-signal/25 active:scale-95 text-[0.95rem]"
