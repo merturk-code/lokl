@@ -97,7 +97,7 @@ export function Nav() {
             rel="noopener noreferrer"
             className="hidden md:inline-flex items-center px-5 py-2 rounded-full bg-signal text-white text-sm font-medium hover:bg-signal/90 transition-all duration-200 hover:shadow-lg hover:shadow-signal/20"
           >
-            See your site, free
+            See your site free
           </Link>
 
           {/* Mobile hamburger */}
@@ -131,7 +131,7 @@ export function Nav() {
                 >
                   <Link
                     href={l.href}
-                    className="text-3xl font-serif italic text-ink leading-none"
+                    className="text-3xl font-sans font-medium text-ink leading-none tracking-[-0.02em]"
                     onClick={() => setOpen(false)}
                   >
                     {l.label}
@@ -147,7 +147,7 @@ export function Nav() {
                 className="flex w-full items-center justify-center px-6 py-4 rounded-full bg-signal text-white text-base font-medium"
                 onClick={() => setOpen(false)}
               >
-                See your site, free
+                See your site free
               </Link>
             </div>
           </motion.div>

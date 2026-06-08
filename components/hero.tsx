@@ -172,7 +172,7 @@ export function Hero() {
               transition-colors duration-200 w-fit
             "
           >
-            See your site, free →
+            See your site free →
           </motion.a>
         </div>
       </div>
