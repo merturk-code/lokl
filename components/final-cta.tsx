@@ -13,7 +13,7 @@ export function FinalCTA() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] rounded-full bg-signal/10 blur-3xl pointer-events-none" />
 
             <div className="relative">
-              <h2 className="font-serif text-4xl md:text-6xl text-white mb-5 leading-tight">
+              <h2 className="font-sans font-black text-4xl md:text-6xl text-white mb-5 leading-tight tracking-tight">
                 Let&apos;s design{" "}
                 <span className="italic text-signal">your</span> site.
               </h2>

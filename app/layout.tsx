@@ -10,7 +10,7 @@ const instrumentSerif = Instrument_Serif({
 })
 
 const inter = Inter({
-  weight: ["300", "400", "500"],
+  weight: ["300", "400", "500", "700", "800", "900"],
   subsets: ["latin"],
   variable: "--font-inter",
 })
