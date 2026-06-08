@@ -30,7 +30,7 @@ export function WhatWeDo() {
             <span className="text-xs font-medium tracking-widest uppercase text-signal">
               What we do
             </span>
-            <h2 className="font-sans font-black text-4xl md:text-5xl text-ink mt-3 leading-tight tracking-tight max-w-md">
+            <h2 className="font-sans font-semibold text-4xl md:text-5xl text-ink mt-3 leading-tight tracking-[-0.02em] max-w-md">
               Built for the way you actually work.
             </h2>
           </div>
@@ -45,7 +45,7 @@ export function WhatWeDo() {
                   <div className="w-10 h-10 rounded-xl bg-signal/10 flex items-center justify-center mb-6">
                     <Icon size={20} className="text-signal" />
                   </div>
-                  <h3 className="font-sans font-bold text-xl text-ink mb-3">
+                  <h3 className="font-sans font-semibold text-xl text-ink mb-3 tracking-[-0.01em]">
                     {card.title}
                   </h3>
                   <p className="text-stone text-sm leading-relaxed font-light">

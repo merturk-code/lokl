@@ -18,7 +18,7 @@ export function Pricing() {
             <span className="text-xs font-medium tracking-widest uppercase text-signal">
               Pricing
             </span>
-            <h2 className="font-sans font-black text-4xl md:text-5xl text-ink mt-3 leading-tight tracking-tight max-w-md">
+            <h2 className="font-sans font-semibold text-4xl md:text-5xl text-ink mt-3 leading-tight tracking-[-0.02em] max-w-md">
               Honest pricing, no surprises.
             </h2>
           </div>
@@ -38,7 +38,7 @@ export function Pricing() {
             </div>
 
             {/* Heading */}
-            <h3 className="font-sans font-bold text-2xl md:text-3xl text-ink mb-3 leading-snug max-w-sm">
+            <h3 className="font-sans font-medium text-2xl md:text-3xl text-ink mb-3 leading-snug tracking-[-0.02em] max-w-sm">
               We&apos;re new — so our first clients get our best price.
             </h3>
             <p className="text-stone text-sm mb-10 font-light leading-relaxed max-w-xs">
@@ -50,7 +50,7 @@ export function Pricing() {
             <div className="flex flex-col sm:flex-row gap-6 mb-10">
               {terms.map((t) => (
                 <div key={t.label} className="flex-1">
-                  <div className="font-sans font-black text-3xl text-ink leading-none mb-1">
+                  <div className="font-sans font-medium text-3xl text-ink leading-none mb-1 tracking-[-0.02em]">
                     {t.label}
                   </div>
                   <div className="text-stone text-sm font-light">{t.detail}</div>

@@ -34,7 +34,7 @@ export function HowItWorks() {
             <span className="text-xs font-medium tracking-widest uppercase text-signal">
               How it works
             </span>
-            <h2 className="font-sans font-black text-4xl md:text-5xl text-white mt-3 leading-tight tracking-tight max-w-lg">
+            <h2 className="font-sans font-semibold text-4xl md:text-5xl text-white mt-3 leading-tight tracking-[-0.02em] max-w-lg">
               Simple from start to site.
             </h2>
           </div>
