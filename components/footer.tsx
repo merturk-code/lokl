@@ -53,7 +53,7 @@ export function Footer() {
             </h4>
             <ul className="space-y-3 text-sm text-stone font-light">
               <li>
-                
+                <a
                   href="mailto:mert@loklstudio.com"
                   className="hover:text-ink transition-colors"
                 >
@@ -66,7 +66,7 @@ export function Footer() {
               {[
                 { Icon: IconLinkedIn, label: "LinkedIn", href: "https://www.linkedin.com/company/lokl-studio" },
               ].map(({ Icon, label, href }) => (
-                
+                <a
                   key={label}
                   href={href}
                   aria-label={label}
