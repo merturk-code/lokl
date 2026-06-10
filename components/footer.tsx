@@ -23,7 +23,6 @@ export function Footer() {
               Made in London.
             </p>
           </div>
-
           {/* Studio */}
           <div>
             <h4 className="text-xs font-medium tracking-widest uppercase text-stone mb-5">
@@ -47,7 +46,6 @@ export function Footer() {
               </li>
             </ul>
           </div>
-
           {/* Get in touch */}
           <div>
             <h4 className="text-xs font-medium tracking-widest uppercase text-stone mb-5">
@@ -82,7 +80,6 @@ export function Footer() {
             </div>
           </div>
         </div>
-
         {/* Bottom bar */}
         <div className="pt-8 border-t border-hairline flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <p className="text-xs text-stone/70 font-light">
