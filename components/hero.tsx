@@ -127,17 +127,24 @@ export function Hero() {
             text-[clamp(4.8rem,16vw,7rem)]
             md:text-[clamp(3.5rem,7vw,7rem)]
           ">
-            {words.map((word, i) => (
-              <motion.span
-                key={word}
-                {...fadeUp(0.28 + i * 0.13)}
-                className="block"
-              >
-                {word === "more." ? (
-                  <span>more<span className="text-signal">.</span></span>
-                ) : word}
-              </motion.span>
-            ))}
+            {/* Accessible, keyword-rich heading for SEO + screen readers.
+                The stylised wordmark below is decorative (aria-hidden). */}
+            <span className="sr-only">
+              Web design for local businesses in London
+            </span>
+            <span aria-hidden="true" className="block">
+              {words.map((word, i) => (
+                <motion.span
+                  key={word}
+                  {...fadeUp(0.28 + i * 0.13)}
+                  className="block"
+                >
+                  {word === "more." ? (
+                    <span>more<span className="text-signal">.</span></span>
+                  ) : word}
+                </motion.span>
+              ))}
+            </span>
           </h1>
         </div>
 
