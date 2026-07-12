@@ -15,9 +15,9 @@ const inter = Inter({
   variable: "--font-inter",
 })
 
-// Canonical host. If Netlify serves the site on www, change this to
-// "https://www.loklstudio.com" (and the matching URLs in sitemap.ts / robots.ts).
-const SITE_URL = "https://loklstudio.com"
+// Canonical host — Netlify serves the site on www; the apex (loklstudio.com)
+// 308-redirects here, so www is the indexable/canonical version.
+const SITE_URL = "https://www.loklstudio.com"
 
 const DESCRIPTION =
   "Lokl is a small London studio building beautiful, brand-true websites for independent businesses — cafés, salons and shops. AI-fast, human-finished, from £500."

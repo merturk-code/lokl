@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://loklstudio.com/sitemap.xml",
-    host: "https://loklstudio.com",
+    sitemap: "https://www.loklstudio.com/sitemap.xml",
+    host: "https://www.loklstudio.com",
   }
 }
