@@ -1,17 +1,24 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Instrument_Serif, Inter } from "next/font/google"
 import "./globals.css"
+import { LanguageProvider } from "@/lib/i18n"
+import { Aurora, CursorGlow } from "@/components/cursor-glow"
+import { ScrollProgress } from "@/components/scroll-progress"
 
+/* latin-ext carries the Turkish glyphs (ı ğ ş İ Ç Ü Ö). Without it the
+   italic accent headlines fall back to Georgia mid-word on the TR side.
+   If a build ever rejects the subset for this family, drop it here and
+   the Georgia fallback in globals.css covers those characters. */
 const instrumentSerif = Instrument_Serif({
   weight: "400",
   style: ["normal", "italic"],
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-instrument-serif",
 })
 
 const inter = Inter({
-  weight: ["300", "400", "500", "700", "800", "900"],
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-inter",
 })
 
@@ -19,10 +26,15 @@ const inter = Inter({
 // 308-redirects here, so www is the indexable/canonical version.
 const SITE_URL = "https://www.loklstudio.com"
 
-const DESCRIPTION =
-  "Lokl is a small London studio building beautiful, brand-true websites for independent businesses — cafés, salons and shops. AI-fast, human-finished, from £500."
+const TITLE = "Lokl — London Marketing & Creative Agency"
 
-const TITLE = "Lokl — Web Design for Local Businesses in London"
+const DESCRIPTION =
+  "Lokl is a London marketing and creative agency. Websites and rebranding, Google and Meta Ads, PR and app development for ambitious companies across the UK, Europe and Türkiye."
+
+export const viewport: Viewport = {
+  themeColor: "#0a090d",
+  colorScheme: "dark",
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -32,19 +44,24 @@ export const metadata: Metadata = {
   },
   description: DESCRIPTION,
   keywords: [
-    "web design London",
-    "web designer for local businesses",
-    "small business website design",
-    "café website design",
-    "salon website design",
-    "shop website design",
-    "custom website studio London",
+    "London marketing agency",
+    "creative agency London",
+    "rebranding agency",
+    "website design London",
+    "Google Ads agency",
+    "Meta Ads agency",
+    "PR agency London",
+    "app development London",
+    "Londra pazarlama ajansı",
+    "Londra reklam ajansı",
+    "rebranding ajansı",
+    "Google ve Meta reklam yönetimi",
   ],
   applicationName: "Lokl",
   authors: [{ name: "Lokl" }],
   creator: "Lokl",
   publisher: "Lokl",
-  category: "Web Design",
+  category: "Marketing Agency",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -53,6 +70,7 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
     locale: "en_GB",
+    alternateLocale: ["tr_TR"],
   },
   twitter: {
     card: "summary_large_image",
@@ -77,17 +95,33 @@ const jsonLd = {
   "@type": "ProfessionalService",
   name: "Lokl",
   url: SITE_URL,
-  image: `${SITE_URL}/hero-pin.png`,
+  image: `${SITE_URL}/opengraph-image`,
   description: DESCRIPTION,
-  email: "mert@loklstudio.com",
+  email: "hello@loklstudio.com",
   sameAs: ["https://www.linkedin.com/company/lokl-studio"],
-  areaServed: "London, United Kingdom",
-  serviceType: "Web design and development",
-  priceRange: "£500+",
+  areaServed: [
+    { "@type": "Country", name: "United Kingdom" },
+    { "@type": "Country", name: "Türkiye" },
+    { "@type": "Place", name: "Europe" },
+  ],
+  knowsLanguage: ["en", "tr"],
   address: {
     "@type": "PostalAddress",
     addressLocality: "London",
     addressCountry: "GB",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Services",
+    itemListElement: [
+      "Website design and rebranding",
+      "Digital marketing, Google and Meta Ads",
+      "Public relations",
+      "App creation",
+    ].map((s) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: s },
+    })),
   },
 }
 
@@ -101,12 +135,17 @@ export default function RootLayout({
       lang="en-GB"
       className={`${instrumentSerif.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="relative min-h-full">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {children}
+        <LanguageProvider>
+          <Aurora />
+          <CursorGlow />
+          <ScrollProgress />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   )

@@ -1,10 +1,9 @@
 import { Nav } from "@/components/nav"
 import { Hero } from "@/components/hero"
-import { TrustStrip } from "@/components/trust-strip"
-import { WhatWeDo } from "@/components/what-we-do"
-import { HowItWorks } from "@/components/how-it-works"
-import { Pricing } from "@/components/pricing"
-import { FinalCTA } from "@/components/final-cta"
+import { ClientMarquee } from "@/components/client-marquee"
+import { Services } from "@/components/services"
+import { Process } from "@/components/process"
+import { ContactCTA } from "@/components/contact-cta"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -13,11 +12,10 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <TrustStrip />
-        <WhatWeDo />
-        <HowItWorks />
-        <Pricing />
-        <FinalCTA />
+        <ClientMarquee />
+        <Services />
+        <Process />
+        <ContactCTA />
       </main>
       <Footer />
     </>
