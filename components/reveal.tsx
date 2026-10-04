@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, useInView, useReducedMotion, type Variants } from "framer-motion"
-import { useRef, type ReactNode } from "react"
+import { Fragment, useRef, type ReactNode } from "react"
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -92,15 +92,17 @@ export function RevealWords({
       animate={inView ? "show" : "hidden"}
     >
       {words.map((w, i) => (
-        <span
-          key={`${w}-${i}`}
-          className="inline-block overflow-hidden align-bottom pb-[0.35em] -mb-[0.35em]"
-        >
-          <motion.span variants={word} className={`inline-block ${wordClassName}`}>
-            {w}
-            {i < words.length - 1 ? " " : ""}
-          </motion.span>
-        </span>
+        /* The space lives between the masks, not inside them: a trailing
+           space inside an inline-block collapses, which glued the words
+           together. As a text node it still collapses and wraps normally. */
+        <Fragment key={`${w}-${i}`}>
+          <span className="inline-block overflow-hidden align-bottom pb-[0.35em] -mb-[0.35em]">
+            <motion.span variants={word} className={`inline-block ${wordClassName}`}>
+              {w}
+            </motion.span>
+          </span>
+          {i < words.length - 1 ? " " : null}
+        </Fragment>
       ))}
     </motion.span>
   )
