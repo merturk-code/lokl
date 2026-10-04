@@ -63,7 +63,10 @@ export function RevealWords({
      remount whenever the language changes, and children that mount under a
      `whileInView` parent never inherit the visible variant, so the headline
      would silently stay at opacity 0. `animate` is inherited correctly. */
-  const inView = useInView(ref, { once, margin: "-60px" })
+  /* Top margin grows the observer root far above the viewport so a headline
+     the browser scrolled past (restored scroll on reload) still counts as
+     seen; the bottom margin keeps the normal reveal for sections below. */
+  const inView = useInView(ref, { once, margin: "9999px 0px -60px 0px" })
   const words = text.split(" ")
 
   const container: Variants = {
