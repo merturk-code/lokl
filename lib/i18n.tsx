@@ -32,8 +32,8 @@ const en = {
   },
 
   hero: {
-    titleTop: "Brands the world",
-    titleAccent: "takes seriously",
+    titleTop: "The brand you",
+    titleAccent: "always meant to build",
     lede: "Lokl is a London agency building brands, websites, campaigns and apps for ambitious companies. London standards, wherever you trade.",
     primary: "Start a project",
     secondary: "Our clients",
@@ -141,8 +141,8 @@ const tr: typeof en = {
   },
 
   hero: {
-    titleTop: "Dünyanın ciddiye",
-    titleAccent: "aldığı markalar",
+    titleTop: "Hep kurmak",
+    titleAccent: "istediğiniz marka",
     lede: "Lokl, iddialı şirketler için marka, web sitesi, kampanya ve uygulama üreten bir Londra ajansı. Nerede iş yaparsanız yapın, Londra standardı.",
     primary: "Projeyi başlatın",
     secondary: "Referanslarımız",
