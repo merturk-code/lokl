@@ -168,6 +168,12 @@
   background-clip: text;
   color: transparent;
   animation: var(--animate-sheen);
+  /* background-clip: text only paints inside the element box, and the
+     headline's 0.92 line-height makes that box shorter than the glyphs.
+     Descenders (y, g, ğ, ş) fell outside it and lost their fill, so the
+     box grows downward and gives the space straight back. */
+  padding-bottom: 0.22em;
+  margin-bottom: -0.22em;
 }
 .hairline {
   background-image: linear-gradient(
