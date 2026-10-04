@@ -1,7 +1,7 @@
 "use client"
 
-import { motion, useReducedMotion, type Variants } from "framer-motion"
-import type { ReactNode } from "react"
+import { motion, useInView, useReducedMotion, type Variants } from "framer-motion"
+import { useRef, type ReactNode } from "react"
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -58,6 +58,12 @@ export function RevealWords({
   once?: boolean
 }) {
   const reduced = useReducedMotion() ?? false
+  const ref = useRef<HTMLSpanElement>(null)
+  /* Driven by a real `animate` prop rather than `whileInView`. The words
+     remount whenever the language changes, and children that mount under a
+     `whileInView` parent never inherit the visible variant, so the headline
+     would silently stay at opacity 0. `animate` is inherited correctly. */
+  const inView = useInView(ref, { once, margin: "-60px" })
   const words = text.split(" ")
 
   const container: Variants = {
@@ -76,11 +82,11 @@ export function RevealWords({
 
   return (
     <motion.span
+      ref={ref}
       className={className}
       variants={container}
       initial="hidden"
-      whileInView="show"
-      viewport={{ once, margin: "-60px" }}
+      animate={inView ? "show" : "hidden"}
     >
       {words.map((w, i) => (
         <span
@@ -89,7 +95,7 @@ export function RevealWords({
         >
           <motion.span variants={word} className={`inline-block ${wordClassName}`}>
             {w}
-            {i < words.length - 1 ? " " : ""}
+            {i < words.length - 1 ? " " : ""}
           </motion.span>
         </span>
       ))}
